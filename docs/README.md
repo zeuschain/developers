@@ -4,5 +4,5 @@ sidebar: false
 heroImage: /img/Artboard.png
 actionText: 入門 →
 actionLink: /general/
-footer: MIT Licensed | Copyright © 2018-present 捕风实验室 Capturewind Laboratory
+footer: 采用知识共享署名-非商业性使用 4.0 国际许可协议进行许可
 ---
