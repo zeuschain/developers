@@ -8,8 +8,10 @@ module.exports = {
     sidebarDepth: 3,
     nav: [
       { text: "入门", link: "/general/" },
-      { text: "JS API 参考", link: "/js-api/" },
-      { text: "节点安装手册", link: "/installation/" }
+      { text: "JS API", link: "/js-api/" },
+      { text: "iOS API", link: "/ios-api/" },
+      { text: "Android API", link: "/android-api/" },
+      { text: "节点安装", link: "/installation/" }
     ],
     sidebar: {
       "/general/": ["", "use-cases", "get-started-for-app", "teams"],
@@ -18,6 +20,7 @@ module.exports = {
       "/android-api/": ["", "idl"],
 
       "/installation/": ["", "install", "setup", "startup"],
+      "/test": [""],
 
       // fallback
       "/": [""]

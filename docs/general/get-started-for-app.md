@@ -3,13 +3,13 @@
 ## Android 行动应用
 
 ### 1. 导入 SDK 库
+
 在 Project Structure 里选择 File/Project Structure, 点击左上角的 + 进入 New Moudule
 流程(注意不是添加 Module dependency)
 
 ![导入 SDK 库](./android-1-1.png)
 
-选择 `Import JAR/arr Package`，点击Next
-
+选择 `Import JAR/arr Package`，点击 Next
 
 ![选择arr文件所在的路径](./android-1-2.png)
 
@@ -18,11 +18,42 @@
 
 ![选择arr文件所在的路径](./android-1-3.png)
 
-### 2. 初始化 bclSDK
+### 2. 引入 SDK Java 套件
+使用到 SDK 的源代码，需引用 SDK Java 套件：
+`import com.sxh.bcllib.BclSDK;`
 
-### 3. 登录账号
+### 3. 初始化 bclSDK
 
-### 4. 调用接口
+```java
+    BclSDK bclSDK = new BclSDK();
+
+    bclSDK.init(Context, "zeus_url", "zeus_name", "zeus_core_asset", "zeus_faucetUrl", "zeus_chainId",
+            new IBclCallBack() {
+                @Override
+                public void onReceiveValue(String s) {
+
+                }
+            },
+            new RpcConnectionStatusCallBack() {
+                @Override
+                public void callBack(String s) {
+
+                }
+            });
+    }
+```
+
+### 4. 登录账号
+
+```java
+    bclSDK.login("account", "password", new IBclCallBack() {
+            @Override
+            public void onReceiveValue(String s) {
+
+            }
+    });
+```
+
 
 ## iOS 行动应用
 
@@ -43,7 +74,7 @@
 
 应用启动时,在 AppDelegate.m 中初始化 bclObject,
 
-```
+```objectivec
     [[bclObject sharedInstance] initWithUrl: @"<主神链 API URL>"
     Name:@"MTN 新链"
     Core_Asset:@"MTN"
@@ -55,15 +86,14 @@
     }];
 ```
 
-
 ### 4. 登录账号
 
-在初始化bclObject后, 才可调用登录账号接口
+在初始化 bclObject 后, 才可调用登录账号接口
 
-```
+```objectivec
     [bclObject.sharedInstance LoginWithName:@"用户名" pwd:@"密码" Callback:^(NSDictionary *responseDict) {
         NSLog(@"%@", responseDict);
-        
+
         NSInteger status = [responseDict[@"status"] integerValue];
         if (status == 1) {
             NSLog(@"登入成功");
@@ -78,4 +108,3 @@
 ### 5.调用接口
 
 在应用需要调用 SDK 接口方法时,通过`[bclObject shareInstance]`对象调用
-

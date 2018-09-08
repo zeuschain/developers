@@ -4,7 +4,7 @@
 
 ### 登录账号
 
-```objc
+```objectivec
 /**
   登录账号
 
@@ -17,7 +17,7 @@
 
 ### 退出登录
 
-```objc
+```objectivec
 /**
  退出登录
 
@@ -28,7 +28,7 @@
 ```
 ### 注册账号
 
-```objc
+```objectivec
 /**
   注册账号
 
@@ -41,7 +41,7 @@
 
 ### 修改密码
 
-```objc
+```objectivec
 /**
   修改密码
 
@@ -55,7 +55,7 @@
 
 ### 获取私钥
 
-```objc
+```objectivec
 /**
   获取私钥
 
@@ -66,7 +66,7 @@
 
 ### 通过私钥登录
 
-```objc
+```objectivec
 /**
  通过私钥登录
 
@@ -78,7 +78,7 @@
 
 ### 获取用户信息
 
-```objc
+```objectivec
 /**
  获取用户信息
 
@@ -90,7 +90,7 @@
 
 ### 转账
 
-```objc
+```objectivec
 /**
   转账 客户的可以通过获取的资产列表先校验对应资产余额是否足够
 
@@ -109,7 +109,7 @@
 
 ### 锁定账户
 
-```objc
+```objectivec
 /**
  锁定账户
 
@@ -120,7 +120,7 @@
 
 ### 解锁账号
 
-```objc
+```objectivec
 /**
  解锁账号
 
@@ -134,7 +134,7 @@
 
 ### 查询账户拥有的所有资产列表
 
-```objc
+```objectivec
 /**
  查询账户拥有的所有资产列表
 
@@ -148,7 +148,7 @@
 
 ### 查询账户指定资产
 
-```objc
+```objectivec
 /**
   查询账户指定资产
 
@@ -162,7 +162,7 @@
 
 ### 查询账户记录
 
-```objc
+```objectivec
 /**
   查询账户记录
 
@@ -176,7 +176,7 @@
 
 ### 订阅账户记录
 
-```objc
+```objectivec
 /**
   订阅账户记录
 
@@ -191,7 +191,7 @@
 
 ### 查看当前登录账户收到的提议
 
-```objc
+```objectivec
 /**
   查看当前登录账户收到的提议
 
@@ -205,7 +205,7 @@
 
 ### 注册游戏开发者
 
-```objc
+```objectivec
 /**
  注册游戏开发者
 
@@ -216,7 +216,7 @@
 
 ### 创建游戏版本
 
-```objc
+```objectivec
 /**
  创建游戏版本
 
@@ -228,7 +228,7 @@
 
 ### 提议关联游戏版本
 
-```objc
+```objectivec
 /**
  提议关联游戏版本
 
@@ -241,7 +241,7 @@
 
 ### 创建游戏道具
 
-```objc
+```objectivec
 /**
   创建游戏道具
 
@@ -259,7 +259,7 @@
 
 ### 删除游戏道具
 
-```objc
+```objectivec
 /**
   删除游戏道具
 
@@ -272,7 +272,7 @@
 
 ### 更新游戏道具数据
 
-```objc
+```objectivec
 /**
  更新游戏道具数据
 
@@ -285,7 +285,7 @@
 
 ### 查询道具详细信息
 
-```objc
+```objectivec
 /**
  查询道具详细信息
 
@@ -309,7 +309,7 @@
 
 ### 查询账户下所拥有的道具
 
-```objc
+```objectivec
 /**
  查询账户下所拥有的道具
 
@@ -324,7 +324,7 @@
 
 ### 创建游戏道具出售单
 
-```objc
+```objectivec
 /**
  创建游戏道具出售单
 
@@ -347,7 +347,7 @@
 
 ### 取消游戏道具出售单
 
-```objc
+```objectivec
 /**
   取消游戏道具出售单
 
@@ -360,7 +360,7 @@
 
 ### 装填游戏道具出售单
 
-```objc
+```objectivec
 /**
   装填游戏道具出售单
 
@@ -387,7 +387,7 @@
 
 ### 查询全网游戏道具售卖订单
 
-```objc
+```objectivec
 /**
   查询全网游戏道具售卖订单
 
@@ -407,7 +407,7 @@
 
 ### 查询账户下游戏道具售卖订单
 
-```objc
+```objectivec
 /**
   查询账户下游戏道具售卖订单
 
@@ -421,7 +421,7 @@
 
 ### 查询游戏开发者所关联的游戏版本
 
-```objc
+```objectivec
 /**
  查询游戏开发者所关联的游戏版本
 
@@ -434,7 +434,7 @@
 
 ### 查询游戏开发者所创建的道具
 
-```objc
+```objectivec
 /**
 查询游戏开发者所创建的道具
 
@@ -452,7 +452,7 @@
 
 ### 代理投票账户
 
-```objc
+```objectivec
 /**
  代理投票账户
 
@@ -465,7 +465,7 @@
 
 ### 加载节点投票信息数据
 
-```objc
+```objectivec
 /**
  加载节点投票信息数据
 
@@ -474,27 +474,11 @@
 - (void)LoadVotesWithResult:(void(^)(NSDictionary *responseDict))block;
 ```
 
-
-
-## 区块链浏览器
-
-### 查询block/TXID
-
-```objc
-/**
-  查询block/TXID
-
- @param blockOrTXID 区块ID
- @param block 查询结果
- */
-- (void)QueryBlockTXID:(NSString *)blockOrTXID Callback:(void(^)(NSDictionary *responseDict))block;
-```
-
 ## 其它
 
 ### 单例实例
 
-```objc
+```objectivec
 /**
  单例实例
 
@@ -505,7 +489,7 @@
 
 ### 库传参初始化
 
-```objc
+```objectivec
 /**
  库传参初始化
 
@@ -530,7 +514,7 @@
 
 ### 断开websoket通信
 
-```objc
+```objectivec
 /**
  断开websoket通信
  @param block 结果
@@ -538,3 +522,14 @@
 - (void)Disconnect:(void(^)(NSDictionary *responseDict))block;
 ```
 
+### 查询block/TXID
+
+```objectivec
+/**
+  查询block/TXID
+
+ @param blockOrTXID 区块ID
+ @param block 查询结果
+ */
+- (void)QueryBlockTXID:(NSString *)blockOrTXID Callback:(void(^)(NSDictionary *responseDict))block;
+```
